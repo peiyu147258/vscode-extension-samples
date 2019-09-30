@@ -22,7 +22,7 @@ export function activate({ subscriptions }: vscode.ExtensionContext) {
 	myStatusBarItem.command = myCommandId;
 	subscriptions.push(myStatusBarItem);
 
-	// register some listener that make sure the status bar 
+	// register some listener that make sure the status bar
 	// item always up-to-date
 	subscriptions.push(vscode.window.onDidChangeActiveTextEditor(updateStatusBarItem));
 	subscriptions.push(vscode.window.onDidChangeTextEditorSelection(updateStatusBarItem));
